@@ -1,5 +1,8 @@
 package com.example.Inventory.system.Service;
 
-public class StoreManagerService {
+import org.springframework.stereotype.Service;
 
+@Service
+public class StoreManagerService {
+	
 }

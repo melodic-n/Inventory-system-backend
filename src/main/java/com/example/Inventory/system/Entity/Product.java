@@ -1,20 +1,30 @@
 package com.example.Inventory.system.Entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "products" )
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	@Column(name = "name")
 	private String name;
+	@Column(name ="Category")
 	private String Category;
+	@Column(name = "unit")
 	private int unit;
+	@Column(name = "unitary_price")
 	private float unitary_price;
 
+	public Product() {
+		// TODO Auto-generated constructor stub
+	}
 	public Product(String name, String category, int unit, float unitary_price) {
 		this.name = name;
 		this.Category = category;
